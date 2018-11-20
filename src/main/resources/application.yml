@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: hello-world-ms
+
+server:
+  port: 8081
+
+logging:
+  level:
+    root: info
+  pattern:
+    console: "%d{dd-MM-yyyy HH:mm:ss.SSS}  [app:${spring.application.name} custom-mdc-field:%mdc{custom-mdc-field}] ${PID:-} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n"
